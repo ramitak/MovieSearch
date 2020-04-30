@@ -1,4 +1,4 @@
-# React Shopping Cart (CodeLouFinalProject) - March 2020
+# React Movie Search App (CodeLouFinalProject) - March 2020
 
 ## Overview
 Build a Movie Search app that allows user to search the movies and help them find it. Also it helps to find the weather of particular area.It is aimed to make the user easier and faster.This project is build using React and React-Router.
@@ -11,7 +11,7 @@ Build a Movie Search app that allows user to search the movies and help them fin
 
 ## Features
 
-   - Can: create, read, update, and delete
+   - Can: Show the movies lists by searching, can show the random users information, shows the weather information of any area.
 
 
 ## Requirements
