@@ -6,72 +6,21 @@ import axios from 'axios';
 
 //App COmponents //
 import Header from  './components/Header';
-import SearchArea from  './components/SearchArea';
-import MovieList from './components/MovieList';
+import MovieInfo from './components/Movies/MovieInfo';
 import Users from './components/Users/Users';
 import UserTitle from './components/Users/UserTitle';
-import Weather from './components/Weather';
+import UserInfo from './components/Users/UserInfo';
+import WeatherInfo from './components/Weather/WeatherInfo';
 
 import './App.css';
 
 
-// const API_KEY = "ad3bae0d6d3bc7c326b5020032c073d2";
-
 class App extends Component {
-  constructor() {
-    super()
-      this.state = {
-      movies: [],
-      searchTerm: '',
+  
 
-      //state for randomuser api //
-      user: []
-    }
-    this.apiKey = process.env.REACT_APP_API
-  }
+  
+    // api.openweathermap.org/data/2.5/weather?q={city name},{state},{country code}&appid={your api key}
 
-  async componentDidMount() {
-    this.handleSubmit();
-     this.userInfo();
-    //  this.getWeather();
-}
-
-  handleSubmit = () => {
-    // e.preventDefault();
-
-    // fetch(`https://api.themoviedb.org/3/movie/550?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
-    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${this.state.searchTerm}`)
-    
-    
-    .then(data => data.json())
-    .then(data => {
-      console.log('response data:', data);
-      
-      this.setState({ movies: data.results})
-    })
-  }
-
-  handleChange = (e) => {
-    e.preventDefault();
-    this.setState({ searchTerm: e.target.value })
-
-  }
-
-  //Functions for the user data
-
-  userInfo = () => {
-    axios.get(`https://api.randomuser.me/?results=5`)
-    .then(response => {
-      console.log('results:', response);
-      this.setState({user: response.data.results});
-    })
-  }
-    // userInfo = async () => {
-    //   const url = "https://api.randomuser.me/?results=5";
-    //   const response = await fetch(url);
-    //   const data = await response.json();
-    //   this.setState({user: data.results})
-    // }
   
 
   render() {
@@ -83,20 +32,10 @@ class App extends Component {
         {/* Navigable Routes  */}
 
         {/* <Route exact path="/movieList" component={MovieList} movies={this.state.movies} /> */}
-        <Route exact path="/movieList" render={() => <MovieList movies={this.state.movies} /> } />
-        <Route path="/user" component={Users} />
-        <Route path="/weather" component={Weather} />
-
-        <SearchArea handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-        {/* <MovieList movies={this.state.movies} /> */}
-        <div className="testimonials">
-            <UserTitle />
-            <div className="row">
-              <Users users={this.state.user} />
-            </div>
-            
-           
-        </div>
+        <Route exact path="/" component={MovieInfo} />
+        <Route exact path="/user" component={UserInfo} />
+        <Route exact path="/weather" component={WeatherInfo} />
+        
       </div>
       </BrowserRouter>
     );
