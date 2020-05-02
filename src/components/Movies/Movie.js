@@ -15,7 +15,7 @@ const Movie = (props) => {
                 </div>
 
                 <div className="card-body">
-                    <p className="card-text"> This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p className="card-text"> {props.title} </p>
                 </div>
             </div>
         </Col>

@@ -6,35 +6,35 @@ import UserTitle from './UserTitle';
 
 
 class UserInfo extends Component{
-// constructor() {
-//     super()
-//     this.state = {
+constructor() {
+    super()
+    this.state = {
 
-//         //state for randomuser api //
-//         user: []
-//     }
-// }
+        //state for randomuser api //
+        user: []
+    }
+}
 
-// async componentDidMount() {
-//     this.userInfo();
-//    }
+async componentDidMount() {
+    this.userInfo();
+   }
 
-//    // Functions for the user data
-//    userInfo = async () => {
-//        const url = "https://api.randomuser.me/?results=5";
-//        const response = await fetch(url);
-//        const data = await response.json();
-//        console.log('user api result', data);
-//        this.setState({user: data.results})
+   // Functions for the user data
+   userInfo = async () => {
+       const url = "https://api.randomuser.me/?results=5";
+       const response = await fetch(url);
+       const data = await response.json();
+       console.log('user api result', data);
+       this.setState({user: data.results})
 
-// }
+}
 
     render(){
         return(
             <Container>
                 <Row>
                     <UserTitle />
-                    <Users />
+                    <Users user={this.state.user} />
                 </Row>
                  
              </Container>

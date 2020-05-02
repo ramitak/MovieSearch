@@ -25,9 +25,13 @@ class MovieInfo extends Component{
     
       handleSubmit = (e) => {
         e.preventDefault();
-        this.getMovies();
+        if(this.state.searchTerm === ''){
+          this.setState({movies: []})
+        } else{
+          this.getMovies();
+          }
         
-      }
+        }
     
       handleChange = (e) => {
         e.preventDefault();

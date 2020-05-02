@@ -49,7 +49,7 @@ class WeatherInfo extends Component {
         return(
             <Container>
                 <Row>
-                    <Col sm={{span: 8, offset: 2 }}>
+                    <Col xs={12} lg={{span: 8, offset: 2 }}>
                         <div className="weather-content">
                             <Titles />
                             <WeatherForm loadWeather={this.getWeather} />

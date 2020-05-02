@@ -11,7 +11,7 @@ Build a Movie Search app that allows user to search the movies and help them fin
 
 ## Features
 
-   - Can: Show the movies lists by searching, can show the random users information, shows the weather information of any area.
+   - Can: Shows the movies lists by searching, show the random users information, shows the weather information of any area.
 
 
 ## Requirements
@@ -23,8 +23,9 @@ Build a Movie Search app that allows user to search the movies and help them fin
 3. Clone down this repository.You will need node and npm installed globally on your device.
 
    ## Installation:
+      git clone https://github.com/ramitak/MovieSearch.git
 
-      cd project
+      cd Movie Search
 
       npm install
 

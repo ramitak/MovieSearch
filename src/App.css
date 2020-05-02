@@ -70,6 +70,15 @@ nav li a:hover{
   width: 100%;
 }
 
+.card-content .card-body{
+  margin-top: 8px;
+  padding: 0;
+}
+
+.card-body .card-text{
+  line-height: 1.4;
+}
+
 .testimonials{
   margin-top: 50px;
 }
@@ -102,6 +111,16 @@ nav li a:hover{
   margin:  60px 0 80px;
 }
 
+.user-email p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  width: 95%;
+}
+
+/* Css for Weather */
+
 .weather-content{
   margin:  80px 0;
 }
@@ -131,3 +150,42 @@ nav li a:hover{
   font-weight: normal;
   margin-left: 6px;
 }
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+  nav{
+    justify-content: center;
+  } 
+
+  nav ul{
+    padding-left: 0;
+    
+  }
+
+  .weather-content .form-inline{
+    display: block;
+  }
+
+  .weather-content .form-inline input{
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .form-group input{
+    margin-right: 6px;
+  }
+
+  .form-inline .form-control,
+  .form-inline .btn{
+    padding: .375rem 0.5rem;
+  }
+
+ }
+
+ @media (max-width: 991.98px) { 
+      .card img{
+        height:  auto !important;
+      }
+  }
